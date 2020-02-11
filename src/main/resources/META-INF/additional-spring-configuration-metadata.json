@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "datasource.liquibase.change-log",
+      "type": "java.lang.String",
+      "description": "Description for datasource.liquibase.change-log."
+  }
+] }
