@@ -4,5 +4,10 @@
       "name": "datasource.liquibase.change-log",
       "type": "java.lang.String",
       "description": "Description for datasource.liquibase.change-log."
-  }
-] }
+    },
+    {
+      "name": "spring.profile.active",
+      "type": "java.lang.String",
+      "description": "Description for spring.profile.active."
+    }
+  ] }

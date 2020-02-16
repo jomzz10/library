@@ -1,0 +1,101 @@
+databaseChangeLog:
+- changeSet:
+    id: Base Table Book Category
+    author: jomz
+    preConditions:
+        - onFail: MARK_RAN
+        - not:
+           - tableExists:
+               tableName: book_category
+    changes:
+      - createTable:
+            tableName: book_category
+            columns:
+              - column:
+                  name: id
+                  type: Long
+                  autoIncrement: true
+                  constraints:
+                      primaryKey: true
+                      nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                      nullable: false
+              - column:
+                  name: description
+                  type: text
+                  constraints:
+                      nullable: false
+              - column:
+                  name: deleted
+                  type: boolean
+                  constraints:
+                      nullable: false
+              - column:
+                  name: created_at
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP
+                  defaultValueComputed: CURRENT_TIMESTAMP()
+                  constraints:
+                    nullable: false
+- changeSet:
+    id: Base Table Book
+    author: jomz
+    preConditions:
+      - onFail: MARK_RAN
+      - not:
+          - tableExists:
+              tableName: book
+    changes:
+      - createTable:
+          tableName: book
+          columns:
+            - column:
+                name: id
+                type: Long
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: title
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: author
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: description
+                type: text
+                constraints:
+                  nullable: false
+            - column:
+                name: copyright
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: deleted
+                type: boolean
+                constraints:
+                  nullable: false
+            - column:
+                name: created_at
+                type: TIMESTAMP
+                constraints:
+                  nullable: false
+            - column:
+                name: updated_at
+                type: TIMESTAMP
+                defaultValueComputed: CURRENT_TIMESTAMP()
+                constraints:
+                  nullable: false
