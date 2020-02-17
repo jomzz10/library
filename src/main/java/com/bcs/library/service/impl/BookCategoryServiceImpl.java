@@ -1,22 +1,13 @@
 package com.bcs.library.service.impl;
 
 import com.bcs.library.dto.BookCategoryDto;
-import com.bcs.library.dto.BookDto;
-import com.bcs.library.service.LibraryService;
+import com.bcs.library.service.IBookCategoryService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class LibraryServiceImpl implements LibraryService {
-
-
-    @Override
-    public List<BookDto> retrieveBooks() {
-        return new ArrayList<BookDto>();
-    }
-
+public class BookCategoryServiceImpl implements IBookCategoryService {
     @Override
     public List<BookCategoryDto> retrieveBookCategories() {
         return null;

@@ -1,16 +1,12 @@
 package com.bcs.library.service;
 
 import com.bcs.library.dto.BookCategoryDto;
-import com.bcs.library.dto.BookDto;
 
 import java.util.List;
 
-public interface LibraryService {
-
-    List<BookDto> retrieveBooks();
+public interface IBookCategoryService {
 
     List<BookCategoryDto> retrieveBookCategories();
 
     void uploadBookCategory(List<BookCategoryDto> bookCategories);
-
 }
