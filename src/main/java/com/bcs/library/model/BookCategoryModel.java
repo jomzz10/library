@@ -6,11 +6,12 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Data
 @ApiModel
-@Entity(name = "bookcategory")
-public class BookCategoryModel {
+@Entity(name = "book_category")
+public class BookCategoryModel extends DateModel{
 
     @ApiModelProperty
     @Id
@@ -21,4 +22,10 @@ public class BookCategoryModel {
 
     @ApiModelProperty
     private String description;
+
+    private Boolean deleted;
+
+    @OneToOne(mappedBy = "bookCategory")
+    private BookCategoriesMappingModel bookCategoriesMapping;
+
 }

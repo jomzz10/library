@@ -1,11 +1,14 @@
 package com.bcs.library.dto;
 
-import com.bcs.library.model.BookCategoryModel;
-import io.swagger.annotations.ApiModel;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@ApiModel
+import java.util.List;
+
+@Getter
+@Setter
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class BookDto {
 
     private Long id;
@@ -18,5 +21,7 @@ public class BookDto {
 
     private String copyright;
 
-    private BookCategoryModel bookCategoryModel;
+    private Boolean deleted;
+
+    private List<BookCategoryDto> bookCategories;
 }

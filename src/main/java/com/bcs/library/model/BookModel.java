@@ -1,16 +1,21 @@
 package com.bcs.library.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
-@Data
-@Entity(name="book")
-public class BookModel {
+//import javax.persistence.Entity;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "book")
+public class BookModel extends DateModel {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     private String title;
@@ -21,7 +26,10 @@ public class BookModel {
 
     private String copyright;
 
-    @ManyToOne
-    private BookCategoryModel bookCategoryModel;
+    private Boolean deleted;
+
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "book")
+//    @JsonIgnore
+    private List<BookCategoriesMappingModel> bookCategories;
 
 }

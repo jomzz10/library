@@ -1,11 +1,9 @@
 package com.bcs.library.repository;
 
-import com.bcs.library.model.BookModel;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import com.bcs.library.dto.BookDto;
 
-@Repository
-@Transactional
-public interface BookRepository extends CrudRepository<BookModel, Long> {
+public interface BookRepository {
+
+    void updateBook(BookDto book);
+
 }
