@@ -52,6 +52,13 @@ public class BookController {
         return ResponseEntity.ok("");
     }
 
+    @DeleteMapping("/batch/delete/{ids}")
+    @ApiOperation("Returns list of all Book Categories in the system.")
+    public ResponseEntity batchDeleteBook(@PathVariable List<Long> ids){
+        bookService.deleteBooks(ids);
+        return ResponseEntity.ok("");
+    }
+
     @PostMapping("/{id}/assign/categories/{ids}")
     public ResponseEntity assignBookCategories(@PathVariable("id") Long bookId,@PathVariable("ids") List<Long> categoriesIds){
         bookService.assignBookCategory(bookId, categoriesIds);
