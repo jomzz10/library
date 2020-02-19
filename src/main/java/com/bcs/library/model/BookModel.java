@@ -6,10 +6,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
-//import javax.persistence.Entity;
-
-@Getter
 @Setter
+@Getter
 @Entity
 @Table(name = "book")
 public class BookModel extends DateModel {

@@ -25,29 +25,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce9bab53-1be8-4c78-bb12-a27d25ceb4aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/dto/BookCategoriesMappingDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookCategoriesMappingModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookCategoryMappingsModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/DateModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/JpaBookCategoryMappingsResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/JpaBookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/impl/BookRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/library.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/config/LibraryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/controllers/BookCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/controllers/BookCategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/dto/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/dto/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookCategoryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookCategoryModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/model/BookModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/BookCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/JpaBookCategoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/impl/BookRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/repository/impl/BookRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/service/IBookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/service/IBookService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bcs/library/service/impl/BookServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bcs/library/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +203,7 @@
       <workItem from="1581765197484" duration="4629000" />
       <workItem from="1581835561531" duration="7840000" />
       <workItem from="1581915752790" duration="24506000" />
-      <workItem from="1582085207877" duration="604000" />
+      <workItem from="1582085207877" duration="1886000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit for develop Branch">
       <created>1581421336337</created>
@@ -242,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581917823870</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Created &#10; - Config&#10; - ResourceNotFoundException&#10; = Service Implementation&#10; - Service Interface&#10;Updated&#10; - Controller&#10; - Service Implementation">
+      <created>1582086093973</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582086093973</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,10 +266,10 @@
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
     <state x="2143" y="73" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582042693004" />
-    <state x="2100" y="154" key="#com.intellij.ide.util.MemberChooser" timestamp="1582074521802">
+    <state x="2100" y="154" key="#com.intellij.ide.util.MemberChooser" timestamp="1582086456995">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state x="2100" y="154" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582074521802" />
+    <state x="2100" y="154" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582086456995" />
     <state x="2419" y="194" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1581503900681">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
@@ -291,46 +282,46 @@
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
     <state x="2443" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1581836061808" />
-    <state x="2224" y="0" key="CommitChangelistDialog2" timestamp="1581917822339">
+    <state x="2224" y="0" key="CommitChangelistDialog2" timestamp="1582086091036">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state x="2224" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1581917822339" />
+    <state x="2224" y="0" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582086091036" />
     <state x="2331" y="169" key="FileChooserDialogImpl" timestamp="1582028644771">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
     <state x="2331" y="169" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582028644771" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1582087100852">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100852" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1582087100852">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100852" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.1.bottom/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
+    <state width="1493" height="213" key="GridCell.Tab.1.center" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.1.center/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
+    <state width="1493" height="213" key="GridCell.Tab.1.left" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
-    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1582081755881">
+    <state width="1493" height="213" key="GridCell.Tab.1.left/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
+    <state width="1493" height="213" key="GridCell.Tab.1.right" timestamp="1582087100853">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582081755881" />
+    <state width="1493" height="213" key="GridCell.Tab.1.right/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582087100853" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1582043240350">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
@@ -343,10 +334,10 @@
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
     <state x="2197" y="61" key="SettingsEditor/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1581682425439" />
-    <state x="2281" y="151" key="Vcs.Push.Dialog.v2" timestamp="1581917829911">
+    <state x="2281" y="151" key="Vcs.Push.Dialog.v2" timestamp="1582086096409">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>
-    <state x="2281" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1581917829911" />
+    <state x="2281" y="151" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1536.834@1920.0.1536.834" timestamp="1582086096409" />
     <state x="2588" y="308" width="417" height="494" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1582044355285">
       <screen x="1920" y="0" width="1536" height="834" />
     </state>

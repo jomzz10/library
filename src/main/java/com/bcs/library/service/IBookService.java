@@ -19,8 +19,8 @@ public interface IBookService {
 
     void deleteBooks(List<Long> bookIds);
 
-    BookDto assignBookCategory(Long bookId, List<Long> bookCategoryIds);
+    void assignBookCategory(Long bookId, List<Long> bookCategoryIds);
 
-    BookDto removeBookCategory(Long bookId, List<Long> bookCategoryIds);
+    void removeBookCategory(Long bookId, List<Long> bookCategoryIds);
 
 }

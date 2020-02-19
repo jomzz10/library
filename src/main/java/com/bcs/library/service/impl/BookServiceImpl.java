@@ -6,6 +6,7 @@ import com.bcs.library.exception.ResourceNotFoundException;
 import com.bcs.library.model.BookCategoriesMappingModel;
 import com.bcs.library.model.BookCategoryMappingsModel;
 import com.bcs.library.model.BookModel;
+import com.bcs.library.repository.BookRepository;
 import com.bcs.library.repository.JpaBookCategoryMappingsResource;
 import com.bcs.library.repository.JpaBookCategoryRepository;
 import com.bcs.library.repository.JpaBookRepository;
@@ -24,7 +25,10 @@ import java.util.stream.Collectors;
 public class BookServiceImpl implements IBookService {
 
     @Autowired
-    JpaBookRepository bookRepository;
+    JpaBookRepository jpaBookRepository;
+
+    @Autowired
+    BookRepository bookRepository;
 
     @Autowired
     JpaBookCategoryRepository bookCategoryRepository;
@@ -37,7 +41,7 @@ public class BookServiceImpl implements IBookService {
 
     @Override
     public List<BookDto> retrieveBooks() {
-    List<BookModel> books = (List<BookModel>) bookRepository.findAll();
+    List<BookModel> books = (List<BookModel>) jpaBookRepository.findAll();
 
     if(books.isEmpty()){
         System.out.println("Test");
@@ -66,7 +70,7 @@ public class BookServiceImpl implements IBookService {
     @Override
     @Transactional
     public void addBook(BookDto book) {
-        bookRepository.save(modelMapper.map(book, BookModel.class));
+        jpaBookRepository.save(modelMapper.map(book, BookModel.class));
     }
 
     @Override
@@ -74,17 +78,17 @@ public class BookServiceImpl implements IBookService {
         List<BookModel> bookModels = books.stream().map(book -> {
            return modelMapper.map(book, BookModel.class);
         }).collect(Collectors.toList());
-        bookModels.forEach(book -> bookRepository.save(book));
+        bookModels.forEach(book -> jpaBookRepository.save(book));
     }
 
     @Override
     public Optional<BookDto> updateBook(BookDto book) {
 
-        if(bookRepository.existsById(book.getId())){
+        if(jpaBookRepository.existsById(book.getId())){
             throw new ResourceNotFoundException("BookID : " + book.getId() + " not found");
         }
 
-        return bookRepository.findById(book.getId()).map(bookExists -> {
+        return jpaBookRepository.findById(book.getId()).map(bookExists -> {
             bookExists = modelMapper.map(book, BookModel.class);
             return modelMapper.map(bookExists, BookDto.class);
         });
@@ -92,19 +96,27 @@ public class BookServiceImpl implements IBookService {
 
     @Override
     public void deleteBook(Long id) {
-
-
+        if(!jpaBookRepository.existsById(id)){
+            throw new ResourceNotFoundException("BookID : " + id + " not found");
+        }
+        bookRepository.deleteBook(id);
     }
 
     @Override
     public void deleteBooks(List<Long> bookIds) {
 
+        for(Long id : bookIds){
+            if(!jpaBookRepository.existsById(id)){
+                throw new ResourceNotFoundException("BookID : " + id + " not found");
+            }
+            bookRepository.deleteBook(id);
+        }
     }
 
     @Override
-    public BookDto assignBookCategory(Long bookId, List<Long> bookCategoryIds) {
+    public void assignBookCategory(Long bookId, List<Long> bookCategoryIds) {
         BookCategoryMappingsModel bookCategoryMappingsModel = new BookCategoryMappingsModel();
-        if(!bookRepository.existsById(bookId)){
+        if(!jpaBookRepository.existsById(bookId)){
             throw new ResourceNotFoundException("BookID : " + bookId + " not found");
         }
         bookCategoryMappingsModel.setBookId(bookId);
@@ -116,13 +128,23 @@ public class BookServiceImpl implements IBookService {
             bookCategoryMappingsModel.setDeleted(false);
             jpaBookCategoryMappingsResource.save(bookCategoryMappingsModel);
         }
-        Optional<BookModel> book = bookRepository.findById(bookId);
-        return convertToDto(modelMapper.map(book, BookModel.class));
     }
 
     @Override
-    public BookDto removeBookCategory(Long bookId, List<Long> bookCategoryIds) {
-        return null;
+    public void removeBookCategory(Long bookId, List<Long> bookCategoryIds) {
+//        BookCategoryMappingsModel bookCategoryMappingsModel = new BookCategoryMappingsModel();
+//        if(!bookRepository.existsById(bookId)){
+//            throw new ResourceNotFoundException("BookID : " + bookId + " not found");
+//        }
+//        bookCategoryMappingsModel.setBookId(bookId);
+//        for (Long id : bookCategoryIds){
+//            if(!bookCategoryRepository.existsById(id)){
+//                throw new ResourceNotFoundException("Book Category Id : " + id + " not found");
+//            }
+//            bookCategoryMappingsModel.setBookCategoryId(id);
+//            bookCategoryMappingsModel.setDeleted(false);
+//            jpaBookCategoryMappingsResource.save(bookCategoryMappingsModel);
+//        }
     }
 
 }

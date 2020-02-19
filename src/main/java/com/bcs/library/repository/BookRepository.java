@@ -6,4 +6,6 @@ public interface BookRepository {
 
     void updateBook(BookDto book);
 
+    void deleteBook(Long bookId);
+
 }

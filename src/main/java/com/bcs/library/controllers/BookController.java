@@ -41,23 +41,27 @@ public class BookController {
     @PutMapping("/update")
     @ApiOperation("Returns list of all Book Categories in the system.")
     public ResponseEntity updateBook(@RequestBody BookDto book){
+
         return ResponseEntity.ok("");
     }
 
     @DeleteMapping("/delete/{id}")
     @ApiOperation("Returns list of all Book Categories in the system.")
     public ResponseEntity deleteBook(@PathVariable Long id){
+        bookService.deleteBook(id);
         return ResponseEntity.ok("");
     }
 
     @PostMapping("/{id}/assign/categories/{ids}")
     public ResponseEntity assignBookCategories(@PathVariable("id") Long bookId,@PathVariable("ids") List<Long> categoriesIds){
-        return ResponseEntity.ok(bookService.assignBookCategory(bookId, categoriesIds));
+        bookService.assignBookCategory(bookId, categoriesIds);
+        return ResponseEntity.ok("");
     }
 
     @PutMapping("/{id}/remove/categories/{ids}")
     public ResponseEntity removeBookCategories(@PathVariable("id") Long bookId,@PathVariable("ids") List<Long> categoriesIds){
-        return ResponseEntity.ok(bookService.removeBookCategory(bookId, categoriesIds));
+        bookService.removeBookCategory(bookId, categoriesIds);
+        return ResponseEntity.ok("");
     }
 
 }
